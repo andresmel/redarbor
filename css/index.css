@@ -23,7 +23,7 @@
     text-align: center;
     justify-content: center;
     vertical-align: middle;
-    font-size: 22px;
+    font-size: 22px !important;
     padding-top: 10px;
     display: flex;
     justify-content: center;

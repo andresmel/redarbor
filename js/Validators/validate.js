@@ -12,3 +12,8 @@ function letters(event) {
 
   input.value = valor;
 }
+
+function esCorreoValido(correo) {
+  const patron = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  return patron.test(correo);
+}

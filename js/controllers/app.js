@@ -1,6 +1,6 @@
 //agrega componente header a layout
 const header = () => {
-  fetch("/components/header.html")
+  fetch("components/header.html")
     .then((response) => {
       if (!response.ok) {
         alert("error en el fetch no se puede acceder al recurso");
@@ -18,7 +18,7 @@ const header = () => {
 
 //agreg componente modal a layout
 const modalDialog = () => {
-  fetch("/components/modal.html")
+  fetch("components/modal.html")
     .then((response) => {
       if (!response.ok) {
         alert("error en el fetch no se puede acceder al recurso");
@@ -35,7 +35,7 @@ const modalDialog = () => {
 };
 //agrega componente modalEdit a layout
 const modalEdit = () => {
-  fetch("/components/modalEdit.html")
+  fetch("components/modalEdit.html")
     .then((response) => {
       if (!response.ok) {
         alert("error en el fetch no se puede acceder al recurso");
@@ -53,7 +53,7 @@ const modalEdit = () => {
 
 //agrega componente loading a layout
 const loading = () => {
-  fetch("/components/loading.html")
+  fetch("components/loading.html")
     .then((response) => {
       if (!response.ok) {
         alert("error en el fetch no se puede acceder aal recurso");
@@ -70,7 +70,7 @@ const loading = () => {
 };
 
 const footer = () => {
-    fetch("/components/footer.html")
+    fetch("components/footer.html")
       .then((response) => {
         if (!response.ok) {
           alert("error en el fetch no se puede acceder aal recurso");
@@ -88,7 +88,7 @@ const footer = () => {
 
 //agrega componente tabla a layout
 const table = () => {
-  fetch("/components/table.html")
+  fetch("components/table.html")
     .then((response) => {
       if (!response.ok) {
         alert("error en el fetch no se puede acceder aal recurso");
@@ -107,7 +107,7 @@ const table = () => {
 
 //carg el componente form a layout
 const form = () => {
-    fetch("/components/form.html")
+    fetch("components/form.html")
       .then((response) => {
         if (!response.ok) {
           alert("error en el fetch no se puede acceder aal recurso");
