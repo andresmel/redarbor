@@ -1,0 +1,76 @@
+let idUser;
+let modalElement;
+let modal;
+const initialModal=()=>{
+ modalElement = document.getElementById('modal');
+ modal = bootstrap.Modal.getInstance(modalElement);
+}
+
+const getUsuarios = () => {
+  try {
+    return getUsuariosService();
+  } catch (error) {
+    return error;
+  }
+};
+
+
+const saveUser=()=>{
+  let name=document.getElementById("name").value;
+  let surname=document.getElementById("surname").value;
+  let dateofbirth=document.getElementById("date").value;
+  let email=document.getElementById("email").value;
+  let rol=document.getElementById("rol").value;
+  if(name == "" || email=="" || dateofbirth=="" || rol==0){
+     alert("Completar todos los datos obligatorios *");
+     return 0;
+  }else{
+    let objUser={};
+    objUser.id=0;
+    objUser.name=name;
+    objUser.surname=surname;
+    objUser.dateofbirth=dateofbirth;
+    objUser.email=email;
+    objUser.roleId=rol;
+    const res=postUserService(objUser);
+    datatable(res);
+  }
+}
+
+const remove = (id,name,surname) => {
+  console.log(id);
+  showModal();
+  document.getElementById("nombre").innerHTML=name+" "+surname;
+  idUser=id;
+};
+
+const removeUser=()=>{
+  try {
+    const res=deleteUserService(idUser);
+    console.log(res);
+    datatable(res);
+    closeModal();
+  } catch (error) {
+    closeModal();
+  }
+}
+
+const editar = (id) => {
+  alert(id);
+};
+
+
+const showModal=()=>{
+  const modal = new bootstrap.Modal(document.getElementById('modal'));
+  modal.show();
+}
+
+const closeModal=()=>{
+  const modalElement = document.getElementById('modal');
+  const modal = bootstrap.Modal.getInstance(modalElement);
+  if (modal) {
+    modal.hide();
+  } else {
+   console.log("error al cerraar el modal");
+  }
+}

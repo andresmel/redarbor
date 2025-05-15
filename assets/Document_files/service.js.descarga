@@ -1,0 +1,24 @@
+let arrayUserNew;
+let idcount=0;
+const getUsuariosService = () => {
+  arrayUserNew = usuarios;
+  idcount=arrayUserNew[arrayUserNew.length-1].id;
+  return arrayUserNew;
+};
+
+const postUserService=(userObj)=>{
+    idcount=idcount+1;
+    userObj.id=idcount;
+  arrayUserNew.push(userObj);
+  return arrayUserNew;
+}
+
+const deleteUserService = (id) => {
+  const res = arrayUserNew.some((e) => e.id == id);
+  if (res) {
+    arrayUserNew = arrayUserNew.filter((e) => e.id != id);
+    return arrayUserNew;
+  } else {
+    return arrayUserNew;
+  }
+};

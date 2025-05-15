@@ -1,0 +1,42 @@
+let usuarios = [
+  {
+    id: "1",
+    name: "andres",
+    surname: "gonzales",
+    dateofbirth: "12/23/1989",
+    email: "andres5443@mail.com",
+    roleId: "1",
+  },
+  {
+    id: "2",
+    name: "diana",
+    surname: "mendoza",
+    dateofbirth: "12/02/2017",
+    email: "diana67@mail.com",
+    roleId: "2",
+  },
+  {
+    id: "3",
+    name: "carmen",
+    surname: "ramirez",
+    dateofbirth: "12/23/1989",
+    email: "carmen3425@mail.com",
+    roleId: "3",
+  },
+  {
+    id: "4",
+    name: "alejandra",
+    surname: "morelos",
+    dateofbirth: "12/23/2000",
+    email: "aleja_12@mail.com",
+    roleId: "3",
+  },
+  {
+    id: "5",
+    name: "pilar",
+    surname: "torres",
+    dateofbirth: "21/10/2020",
+    email: "pilaar89101@mail.com",
+    roleId: "1",
+  },
+];

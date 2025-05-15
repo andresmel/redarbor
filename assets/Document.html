@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<!-- saved from url=(0022)http://localhost:3000/ -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="./Document_files/index.css">
+<link href="./Document_files/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+<script src="./Document_files/bootstrap.bundle.min.js.descarga"></script>
+<script src="./Document_files/jquery-3.6.0.min.js.descarga"></script>
+    <script src="./Document_files/validate.js.descarga"></script>
+    <script src="./Document_files/data.js.descarga"></script>
+    <script src="./Document_files/app.js.descarga"></script>
+    <script src="./Document_files/controller.js.descarga"></script>
+    <script src="./Document_files/service.js.descarga"></script>
+    <script src="./Document_files/jquery.dataTables.min.js.descarga"></script>
+    <link rel="stylesheet" href="./Document_files/jquery.dataTables.min.css">
+    
+    <title>Document</title>
+</head>
+<body>
+    <div id="loading"><div class="loader-wrapper">
+  <div class="spinner"></div>
+  <p class="loading-text">Cargando prueba tecnica...</p>
+</div></div>
+    <div id="header"><nav class="navbar navbar-dark bg-primary2">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="http://localhost:3000/#">
+      <img src="./Document_files/logo2.png" alt="" width="30" height="24" class="d-inline-block align-text-top rounded-circle">
+      Computrabajo
+    </a>
+  </div>
+</nav>
+<nav class="header-dos">
+  <span class="text-icon">
+    <table>
+      <tbody><tr>
+        <td>Administracion de Usuarios</td>
+        <td>
+          <svg class="w-[36px] h-[36px] text-gray-800 dark:text-gray-700" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" viewBox="0 0 24 24">
+        <path fill-rule="evenodd" d="M9 4a4 4 0 1 0 0 8 4 4 0 0 0 0-8Zm-2 9a4 4 0 0 0-4 4v1a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2v-1a4 4 0 0 0-4-4H7Zm8-1a1 1 0 0 1 1-1h1v-1a1 1 0 1 1 2 0v1h1a1 1 0 1 1 0 2h-1v1a1 1 0 1 1-2 0v-1h-1a1 1 0 0 1-1-1Z" clip-rule="evenodd"></path>
+      </svg>
+        </td>
+      </tr>
+    </tbody></table>
+ 
+</span>
+
+
+</nav></div>
+    <div id="form"><div class="container-form">
+  <div class="header-form">
+     Agregar Usuario
+  </div>
+  <div class="container-inputs">
+  <input type="text" class="form-control" id="name" placeholder=" * Name">
+  <input type="text" class="form-control" id="surname" placeholder=" Surname">
+  <input type="date" class="form-control" id="date" placeholder=" * Date Of Birth">
+  <input type="text" class="form-control" id="email" placeholder=" * Email">
+  <select class="form-control" id="rol">
+    <option value="0">* Seleccione Rol</option>
+    <option value="1">Desarrollador</option>
+    <option value="2">Team leader</option>
+    <option value="3">Cto</option>
+  </select>
+  <button class="btn btn-primary" onclick="saveUser()">Guardar</button>
+  </div>
+</div></div>
+    <div class="container-table relative overflow-x-auto shadow-md sm:rounded-lg" id="tableContainer" style="
+    bottom: 100px;
+">
+<div id="table_wrapper" class="dataTables_wrapper no-footer"><div class="dataTables_length" id="table_length"><label>Mostrar <select name="table_length" aria-controls="table" class=""><option value="10">10</option><option value="25">25</option><option value="50">50</option><option value="100">100</option></select> registros</label></div><div id="table_filter" class="dataTables_filter"><label>Buscar:<input type="search" class="" placeholder="" aria-controls="table"></label></div><table id="table" class="cell-border compact stripe no-footer dataTable" aria-describedby="table_info" style="width: 1159px;">
+    <thead>
+        <tr><th scope="col" class="px-6 py-3 sorting sorting_asc" tabindex="0" aria-controls="table" rowspan="1" colspan="1" aria-label="Id: Activar para ordenar la columna de manera descendente" style="width: 23px;" aria-sort="ascending">Id</th><th scope="col" class="px-6 py-3 sorting" tabindex="0" aria-controls="table" rowspan="1" colspan="1" aria-label="Name: Activar para ordenar la columna de manera ascendente" style="width: 173px;">Name</th><th scope="col" class="px-6 py-3 sorting" tabindex="0" aria-controls="table" rowspan="1" colspan="1" aria-label="Surname: Activar para ordenar la columna de manera ascendente" style="width: 223px;">Surname</th><th scope="col" class="px-6 py-3 sorting" tabindex="0" aria-controls="table" rowspan="1" colspan="1" aria-label="DateOfBirth: Activar para ordenar la columna de manera ascendente" style="width: 119px;">DateOfBirth</th><th scope="col" class="px-6 py-1 sorting" tabindex="0" aria-controls="table" rowspan="1" colspan="1" aria-label="Email: Activar para ordenar la columna de manera ascendente" style="width: 151px;">Email</th><th scope="col" class="px-6 py-1 sorting" tabindex="0" aria-controls="table" rowspan="1" colspan="1" aria-label="roleId: Activar para ordenar la columna de manera ascendente" style="width: 94px;">roleId</th><th scope="col" class="px-6 py-1 sorting" tabindex="0" aria-controls="table" rowspan="1" colspan="1" aria-label="Acciones: Activar para ordenar la columna de manera ascendente" style="width: 166px;">Acciones</th></tr>
+    </thead>
+    <tbody>
+
+    <tr class="odd"><td class="sorting_1">1</td><td>andres</td><td>gonzales</td><td>12/23/1989</td><td>andres5443@mail.com</td><td>1</td><td>
+          <button class="btn btn-editar edit" onclick="editar(1)">Edit</button>
+          <button class="btn btn-eliminar remove" data-bs-toggle="modal" onclick="remove(1,&#39;andres&#39;,&#39;gonzales&#39;)">delete</button>
+        </td></tr><tr class="even"><td class="sorting_1">2</td><td>diana</td><td>mendoza</td><td>12/02/2017</td><td>diana67@mail.com</td><td>2</td><td>
+          <button class="btn btn-editar edit" onclick="editar(2)">Edit</button>
+          <button class="btn btn-eliminar remove" data-bs-toggle="modal" onclick="remove(2,&#39;diana&#39;,&#39;mendoza&#39;)">delete</button>
+        </td></tr><tr class="odd"><td class="sorting_1">3</td><td>carmen</td><td>ramirez</td><td>12/23/1989</td><td>carmen3425@mail.com</td><td>3</td><td>
+          <button class="btn btn-editar edit" onclick="editar(3)">Edit</button>
+          <button class="btn btn-eliminar remove" data-bs-toggle="modal" onclick="remove(3,&#39;carmen&#39;,&#39;ramirez&#39;)">delete</button>
+        </td></tr><tr class="even"><td class="sorting_1">4</td><td>alejandra</td><td>morelos</td><td>12/23/2000</td><td>aleja_12@mail.com</td><td>3</td><td>
+          <button class="btn btn-editar edit" onclick="editar(4)">Edit</button>
+          <button class="btn btn-eliminar remove" data-bs-toggle="modal" onclick="remove(4,&#39;alejandra&#39;,&#39;morelos&#39;)">delete</button>
+        </td></tr><tr class="odd"><td class="sorting_1">5</td><td>pilar</td><td>torres</td><td>21/10/2020</td><td>pilaar89101@mail.com</td><td>1</td><td>
+          <button class="btn btn-editar edit" onclick="editar(5)">Edit</button>
+          <button class="btn btn-eliminar remove" data-bs-toggle="modal" onclick="remove(5,&#39;pilar&#39;,&#39;torres&#39;)">delete</button>
+        </td></tr></tbody>
+  </table><div class="dataTables_info" id="table_info" role="status" aria-live="polite">Mostrando 1 a 5 de 5 registros</div><div class="dataTables_paginate paging_simple_numbers" id="table_paginate"><a class="paginate_button previous disabled" aria-controls="table" aria-disabled="true" aria-role="link" data-dt-idx="previous" tabindex="-1" id="table_previous">Anterior</a><span><a class="paginate_button current" aria-controls="table" aria-role="link" aria-current="page" data-dt-idx="0" tabindex="0">1</a></span><a class="paginate_button next disabled" aria-controls="table" aria-disabled="true" aria-role="link" data-dt-idx="next" tabindex="-1" id="table_next">Siguiente</a></div></div></div>
+
+    <div class="modal" id="modal" tabindex="-1">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title">Modal title</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <p>Esta Seguro que quiere eliminar a <strong id="nombre"></strong>
+            </p></div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+              <button type="button" class="btn btn-primary" onclick="removeUser()">Eliminar</button>
+            </div>
+          </div>
+        </div>
+      </div> 
+      
+
+</body></html>
