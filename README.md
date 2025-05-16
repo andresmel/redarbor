@@ -1,17 +1,26 @@
-## redarbor-frontend
+## Redarbor-frontend
 Proyecto en Javascript diseñada para administrar usuario con roles específicos. La aplicación permite agregar, eliminar, presentar usuarios existentes y actualizar usuarios. Permite eliminar varios usuarios seleccionados. También valida que no haya usuarios con el mismo nombre y apellido, valida que sea mayor de edad y uso de correos válidos.
 
 ## Desarrollo
 El sistema se realizó en Javascript puro. La data se encuentra en un archivo llamado data.js. aquí encontrará un objeto con información de usuario y un objeto con información de los roles. Con estos datos se ejecuta todo el crud y validaciones, no cuenta con API “backend”, toda la lógica se encuentra en el Javascript. El front este hecho por componentes, cada componente cuenta con su respectivo html. El proyecto se ejecutó por capas. Controlador, app, validaciones, servicios, estilos y capa de datos.
 
-## tecnologías
+## Tecnologías
 -	Javascript
 -	Jquery (datatable)
 -	Boostrap
 ## estructura del proyecto
+   index.html
+   |_________JS
+   |          |___controllers   -control la logicaa de negocio y la interaccion con el usuario 
+   |          |___services      -recibe los datos desde el controlador y devuelve los datos requeridos por metodos post,get,delete , put "moqueados"
+   |          |___validator     -Valida drtos de entrada de los usuarios
+   |__________data
+   |          |___data          -mantiene los datos de usuario y datos de role inicial
+   |__________components        -componentes o piezas de interfaz de usuario. Header,table,modal,footer,form entre otros
+   |__________css               -contiene los archivo css para darle etilos a los diferentes componentes de la interfaz de usuario
+   |__________assets            -imagenes y/o archivos pdf
 
-
-# repositorio
+# Repositorio
 Git clone https://github.com/andresmel/redarbor.git
 Cd redarbor
 # Servir la aplicación
