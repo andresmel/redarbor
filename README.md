@@ -1,4 +1,4 @@
-##redarbor frontend
+## redarbor-frontend
 Proyecto en Javascript diseñada para administrar usuario con roles específicos. La aplicación permite agregar, eliminar, presentar usuarios existentes y actualizar usuarios. Permite eliminar varios usuarios seleccionados. También valida que no haya usuarios con el mismo nombre y apellido, valida que sea mayor de edad y uso de correos válidos.
 
 ## Desarrollo
