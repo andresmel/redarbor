@@ -7,7 +7,6 @@ const initialModal = () => {
 };
 
 const selectedFiles = () => {
-
   let datosEliminados = [];
   $(".seleccionarFila:checked").each(function () {
     let fila = $(this).closest("tr");
@@ -18,11 +17,11 @@ const selectedFiles = () => {
     };
     datosEliminados.push(datosFila);
   });
-   if(Object.keys(datosEliminados).length<=0){
-    alert("debe seleccionar al menos una fila")
+  if (Object.keys(datosEliminados).length <= 0) {
+    alert("debe seleccionar al menos una fila");
     return 0;
-   }
-  const res=deleteSelected(datosEliminados);
+  }
+  const res = deleteSelected(datosEliminados);
   datatable(res);
 };
 
@@ -103,9 +102,9 @@ const saveUser = () => {
     return 0;
   }
 
-  const vaalcorreo=esCorreoValido(email);
+  const vaalcorreo = esCorreoValido(email);
 
-  if(!vaalcorreo){
+  if (!vaalcorreo) {
     alert("por favor ingrese formto de correo válido");
     return 0;
   }
@@ -119,7 +118,7 @@ const saveUser = () => {
   objUser.roleId = rol;
   //se envía el objeto  con los dartos del nuevo usuario y se guarda
   const res = postUserService(objUser);
-  if(res==true){
+  if (res == true) {
     alert("ya existe el usuario");
     return 0;
   }
@@ -185,9 +184,9 @@ const saveEdit = () => {
     return 0;
   }
 
-   const vaalcorreo=esCorreoValido(email);
+  const vaalcorreo = esCorreoValido(email);
 
-  if(!vaalcorreo){
+  if (!vaalcorreo) {
     alert("por favor ingrese formto de correo válido");
     return 0;
   }
@@ -200,7 +199,7 @@ const saveEdit = () => {
   objUser.email = email;
   objUser.roleId = rol;
   const res = putUserService(objUser);
-  if(res==true){
+  if (res == true) {
     alert("ya existe el usuario");
     return 0;
   }
@@ -248,3 +247,18 @@ const esMayorDeEdad = (fechaNacimientoStr) => {
   }
   return edad;
 };
+
+const datataableVerificar = () => {
+  let table = $("#table").DataTable(); // Asegúrate de inicializar el DataTable
+
+  if (table.data().count() > 0) {
+    console.log("La tabla tiene datos.");
+  } else {
+    console.log("La tabla está vacía.");
+    location.reload();
+  }
+};
+
+setTimeout(() => {
+  datataableVerificar();
+}, 1000);

@@ -53,7 +53,7 @@ const putUserService = (userObj) => {
   const res = arrayUserNew.some((e) => e.id == userObj.id);
   if (res) {
     const val = arrayUserNew.some(
-      (e) => e.name == userObj.name && e.surname == userObj.surname
+      (e) => e.name == userObj.name && e.surname == userObj.surname && userObj.id != e.id
     );
     if(val){
       return val;
